@@ -1,5 +1,6 @@
 <script lang="ts">
     import { open } from '@tauri-apps/plugin-dialog'
+    import './tiny-dme.css'
 
     let debug_message = $state('DEBUG')
 
@@ -41,7 +42,9 @@
         }
 
         debug_message = path
-    } 
+
+        location.href = `/file?path=${path}`
+    }
 </script>
 
 <main class="w-full h-full flex justify-center items-center flex-col gap-10">
@@ -51,4 +54,5 @@
         <button class="btn btn-primary" onclick={openFile}>Open File</button>
     </div>
     <p class="debug text-warning">{ debug_message }</p>
+    <div id="editor" class="w-10 h-10"></div>
 </main>
