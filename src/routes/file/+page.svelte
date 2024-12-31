@@ -43,9 +43,9 @@
         <a href="/">Back</a> <span>Editing: { params.get('path') }</span>
     </div>
 
-    <div class="content">
-        <div id="toolbar"></div>
-        <div id="editor" class="right-0 left-0 h-full"></div>
+    <div class="content flex flex-col h-full">
+        <div class="header"><div id="toolbar"></div></div>
+        <div class="content"><div id="editor" class="right-0 left-0 h-full"></div></div>
     </div>
 </div>
 
